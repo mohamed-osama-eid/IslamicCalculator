@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IslamicCalculator</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class = "container">
+        <header id = 'header'>
+            <div id = 'logo'>
+                <p id = 'logo-name'>Islamic<span class = 'green'>Calculator</span></p>
+            </div>
+            <div id = 'location-search'>
+                <div class = "input-wrapper">
+                    <img src="./assets/images/search .png" alt="magnifying-glass" id = 'magnifying-glass'>
+                    <input list = 'cities' type="text" id = 'location-text' placeholder="أدخل الموقع" dir = "rtl">
+                    <datalist id="cities"></datalist>
+                    <img src="./assets/images/target.png" alt="location-crosshairs" id = 'location-crosshairs'>
+                </div>
+            </div>
+        </header>
+        <div id = 'current-data-location'>
+            <div id = 'current-date'>
+                <div id = 'calendar-date'>
+                    <p id = 'date'>اليـوم</p>
+                    <div id = 'input-img'>
+                        <input type="date" id = 'date-input'>
+                        <img src="./assets/images/calendar.png" alt="calendar" id = 'calendar-img'>
+                    </div>
+                </div>
+                <div id = 'hijri-miladaa-date'>
+                    <P id = 'hijri-date'></P>
+                    <P id = 'miladaa-date'></P>       
+                </div>
+            </div>
+            <img src="./assets/images/mosque.png" alt="mosque" id = 'main-img'>
+            <div id = 'current-location'>
+                <p id = 'location-name'>اوقات الصلاة فى <span id = 'country-name'></span></p>
+                <p id = 'location-prayer-time'></p>
+                <p id = 'daraga'></p>
+            </div>
+        </div>
+        <footer id = 'prayer-times'>
+        </footer>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<!-- <script src="./node_modules/axios/dist/axios.js"></script> --> <!--uncomment in local testing -->
+<script src="./assets/js/helperFunctions.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script src="./assets/js/scripts.js"></script>
+</html>

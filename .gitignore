@@ -1,0 +1,10 @@
+# Ignore dependencies
+node_modules/
+
+# Ignore build output (optional, if using React/Vue/etc.)
+dist/
+build/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
