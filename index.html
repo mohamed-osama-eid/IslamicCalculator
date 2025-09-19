@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
     <title>IslamicCalculator</title>
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
@@ -11,9 +12,10 @@
 </head>
 <body>
     <div class = "container">
+        <!-- header -->
         <header id = 'header'>
             <div id = 'logo'>
-                <p id = 'logo-name'>Islamic<span class = 'green'>Calculator</span></p>
+                <p id = 'logo-name' style = "color: var(--blue);">Islamic<span style="color: var(--white);">Calculator</span></p>
             </div>
             <div id = 'location-search'>
                 <div class = "input-wrapper">
@@ -24,6 +26,9 @@
                 </div>
             </div>
         </header>
+        <!--# header #-->
+
+        <!-- time and location -->
         <div id = 'current-data-location'>
             <div id = 'current-date'>
                 <div id = 'calendar-date'>
@@ -38,15 +43,19 @@
                     <P id = 'miladaa-date'></P>       
                 </div>
             </div>
-            <img src="./assets/images/mosque.png" alt="mosque" id = 'main-img'>
+            <!-- <img src="./assets/images/2597.jpg" alt="mosque" id = 'main-img' style="object-fit: cover;"> -->
             <div id = 'current-location'>
-                <p id = 'location-name'>اوقات الصلاة فى <span id = 'country-name'></span></p>
-                <p id = 'location-prayer-time'></p>
-                <p id = 'daraga'></p>
+                    <p id = 'location-name'>اوقات الصلاة فى <span id = 'country-name'></span></p>
+                    <p id = 'location-prayer-time'></p>
+                    <p id = 'daraga'></p>
             </div>
         </div>
+        <!--# time and location #-->
+
+        <!-- pray times -->
         <footer id = 'prayer-times'>
         </footer>
+        <!--# pray times #-->
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

@@ -51,7 +51,6 @@ function createPrayDivElements(prayName , prayTime , isNextPray){
     prayDiv.classList.add('pray');
     if (isNextPray){
         nextPray.innerText = 'الصلاة التالية';
-        nextPray.classList.add('green')
         prayDiv.classList.add('next-pray');
         prayDiv.append(nextPray);
     }
@@ -128,6 +127,9 @@ function showPosition(position) {
                 const countryCode = countryResponse.data.data[0].countryCode;
                 const nextPrayTime = Object.keys(nextPrayResponse.data.data.timings)[0];
                 fillElements(prayTimingsResponse , countryCode , nextPrayTime);
+                dataList.innerText = '';
+                countryName.value= countryResponse.data.data[0].country;
+                dataListOptions(countryResponse.data.data[0].countryCode , countryResponse.data.data[0].country) 
             });
             
         });
@@ -191,4 +193,11 @@ function getAmPm(timeStr) {
     }
 
     return `${hour}:${minute.toString().padStart(2, "0")} ${period}`;
+}
+
+function dataListOptions(code , name){
+    const option = document.createElement('option');
+    option.innerText = code;
+    option.setAttribute('value' , name)
+    dataList.append(option);
 }

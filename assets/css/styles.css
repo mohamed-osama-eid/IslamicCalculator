@@ -1,11 +1,10 @@
 :root{
-    --green: #096901;
-    --off-white: #EAE6E6;
+    --blue: #42B9F3;
+    --off-white: #CCCCCC;
     --white: #ffffff;
     --gray:#585858;
     --light-gray: #828181;
 }
-.green{color: var(--green);}
 
 html,body,p{
     padding: 0;
@@ -16,19 +15,24 @@ html,body,p{
 body{
     height: 100vh;
     overflow: hidden;
+    color: var(--white);
 }
 
 .container{
-    padding: 1em;
-    height: 100%;
+    height: 100vh;
+    width: 100%;
+    background-image: url('../images/2597.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #header{
-    width: 100%;
+    width: 95%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
+    margin: 0 auto;
+    padding: 1em ;
 }
 
 #logo{
@@ -37,9 +41,7 @@ body{
     align-self: end;
 }
 
-#location-search {
-    position: relative;
-}
+#location-search {position: relative;}
 
 .input-wrapper{
     background-color: var(--off-white);
@@ -59,9 +61,7 @@ body{
     background-color: var(--off-white);
 }
 
-#location-text:focus{
-    outline: none;
-}
+#location-text:focus{outline: none;}
 
 #magnifying-glass , #location-crosshairs{
     width: 1.5em;
@@ -76,29 +76,22 @@ body{
 }
 
 #current-data-location{
-    position: relative;
     margin-bottom: 2em;
+    width: 95%;
+    margin: 10px auto;
+    height: 70%;
 }
 
 #current-date{
     font-family:"Inria Sans";
     color: var(--white);
-    padding: 1em;
+    padding-top: 1em;
     direction: rtl;
-    position: absolute;
-    right: 0;
 }
 
 #calendar-img{
     width: 40px;
     aspect-ratio: 1;
-}
-
-#main-img {
-    width: 100%;
-    border-radius: 15px;
-    height: 640px;
-    object-fit: fill;
 }
 
 #calendar-date{
@@ -132,9 +125,7 @@ body{
     z-index: -1;
 }
 
-#input-img img:hover{
-    cursor: pointer;
-}
+#input-img img:hover{cursor: pointer;}
 
 #hijri-miladaa-date{
     font-size: 1.2em;
@@ -147,30 +138,22 @@ body{
 
 #current-location{
     font-family: 'Times New Roman';
-    text-align: center;
-    position: absolute;
-    opacity: 0;
-    left: 50%;
-    top: 50%;
     line-height: 3em;
-    transform: translate(-50%);
+    opacity: 0;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     transition: all 0.9s ease-in;
 }
 
 #location-name{
     font-weight: bold;
-    font-size: 3em;
-    color: var(--gray);
+    font-size: 4em;
 }
 
-#location-prayer-time , #daraga{
-    font-size: 2em;
-    color: var(--light-gray);
-}
-
-#daraga{
-    font-size: 1em;
-}
+#location-prayer-time , #daraga{font-size: 1.5em;}
 
 #prayer-times{
     display: flex;
@@ -182,28 +165,20 @@ body{
     transition: all 0.9s ease-in;
 }
 
-.pray{
-    text-align: center;
-}
-
-.pray-name{
-    color: var(--gray);
-    font-size: 2em;
-}
-
-.pray-time{
-    color: var(--light-gray);
-    font-size: 1em;
-}
+.pray{text-align: center;}
+.pray-name{font-size: 2.2em;}
+.pray-time{font-size: 1.2em;}
 
 .pray.next-pray{
-    padding: 1em;
-    border: 3px solid var(--green);
+    padding: 0.7em;
+    border: 3px solid var(--off-white);
     border-radius: 5px;
     text-align: center;
 }
 
 .pray.next-pray p:first-child{
-    font-size: 2em;
+    font-size: 3em;
+    line-height: 1.5em;
     font-family: bold;
+    color: var(--off-white);
 }

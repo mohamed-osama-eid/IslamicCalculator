@@ -100,10 +100,7 @@ countryName.addEventListener('input',function(){
             .then(response => {
                 for (data of response.data.data)
                 {
-                    const option = document.createElement('option');
-                    option.innerText = data.code;
-                    option.setAttribute('value' , data.name)
-                    dataList.append(option);
+                    dataListOptions(data.code , data.name)
                 }
             })
             .catch(error => {
